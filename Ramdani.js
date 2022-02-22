@@ -2406,6 +2406,11 @@ break
                   "rowId": "/topupgame"
                 },
                 {
+                  "title": "JOKI GAME",
+                  "description": `Menampilkan Fitur JOKI Game`,
+                  "rowId": "/jokigame"
+                },
+                {
                   "title": "TOP UP SALDO",
                   "description": `Menampilkan Fitur Top Up Saldo`,
                   "rowId": "/topupsaldo"
@@ -2493,6 +2498,54 @@ break
         }
         Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
         break
+
+        case 'jokigame':
+          stod = `${sender}`
+          listMsg = {
+            buttonText: 'Click Here',
+            footerText: `© Creator By Alif Bot`,
+            description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+            sections: [
+              {
+                "title": `Jangan Lupa Donasi Ya Jing`,
+                rows: [
+  
+                  {
+                    "title": "MOBILE LEGENDS",
+                    "description": `Menampilkan Fitur Top Up Ml`,
+                    "rowId": "/jokiml"
+                  },
+                  {
+                    "title": "FREE FIRE",
+                    "description": `Menampilkan Fitur Top Up Ff`,
+                    "rowId": "/jokiff"
+                  },
+                  {
+                    "title": "PUBG",
+                    "description": `Menampilkan Fitur Top Up Pubg`,
+                    "rowId": "/jokipubg"
+                  },
+                  {
+                    "title": "POINT BLANK",
+                    "description": `Menampilkan Fitur Top Up Pb`,
+                    "rowId": "/jokipb"
+                  }                                
+                  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                ]
+              }],
+            listType: 1
+          }
+          Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
+          break
         case 'topupsaldo':
         stod = `${sender}`
         listMsg = {
@@ -2542,7 +2595,7 @@ break
         break
         /////CASEEEEE NYAAAH BWANG
         case 'igowner':
-        reply(`*https://www.instagram.com/alifananta5*`)
+        reply(`*https://www.instagram.com/muhammadramdani196453*`)
         break
         case 'totalfitur':
         case 'total fitur':
@@ -2557,7 +2610,28 @@ case 'donasi':
 case 'donate':
 tes = fs.readFileSync('./media/audio/arigato.mp3')
 reply(`╔════════════════════
-║ *DONASI UNTUK ALIF BOTZ*
+║ *DONASI UNTUK Alif BOTZ*
+╠════════════════════
+║╭──❉ *DONASI KAK* ❉─────
+║│➸ *GOPAY* : _tidak tersedia_
+║│➸ *DANA* : 085890617231
+║│➸ *OVO* : _tidak tersedia_
+║│➸ *PULSA* : _tidak tersedia_
+║╰──────────────────
+╠════════════════════
+║       
+║  ▌│█║▌║▌║║▌║▌║█│▌
+║  ▌│█║▌║▌║║▌║▌║█│▌
+║        
+╠════════════════════
+║ _*© Creator By Alif Bot*_
+╚════════════════════`)
+Ramdani.sendMessage(from, tes, audio, { mimetype: 'audio/mp4', ptt: true, quoted: ftroli })
+break
+case 'bayar':
+tes = fs.readFileSync('./media/audio/arigato.mp3')
+reply(`╔════════════════════
+║ *DONASI UNTUK Alif BOTZ*
 ╠════════════════════
 ║╭──❉ *DONASI KAK* ❉─────
 ║│➸ *GOPAY* : _tidak tersedia_
@@ -2636,79 +2710,46 @@ case 'topupml':
 reply(`*💎DIAMOND ML💎*
 ➖➖➖➖➖➖➖➖➖➖➖
 
-39    💎= Rp.9.000
-65    💎= Rp.14.500
-92    💎= Rp.20.000
-133  💎= Rp.29.000
-266  💎= Rp.58.000
-400  💎= Rp.86.000
-534  💎= Rp.115.000
-670  💎= Rp.144.000
-709  💎= Rp.153.000
-735  💎= Rp.158.500
-803  💎= Rp.170.000
-936  💎= Rp.200.000
-1070💎=Rp.229.000
-1342💎=Rp.285.000
-1434💎=Rp.305.000
-1742💎=Rp.370.000
-2700💎=Rp.570.000
+belom ada list
  
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
+reply(`yang mau bayar bisa ketik*`)
 break
 case 'topupff':
 reply(`*💎DIAMOND FREE FIRE💎*
 ➖➖➖➖➖➖➖➖➖➖➖
 
-20    💎 3.000
-50    💎 7.000
-70    💎 9.500
-100  💎 13.500
-140  💎 18.500
-210  💎 27.500
-280  💎 37.000
-355  💎 46.000
-425  💎 55.000
-500  💎 65.000
-720  💎 92.500
-860  💎 111.000
-1000💎 129.500
-1075💎 138.000
-1440💎 185.000
-2000💎 250.000
-2720💎 342.500
-3000💎 380.000
-4000💎 500.000
-MM : 28.000
-MB  : 140.000
- 
-➖➖➖➖➖➖➖➖➖➖➖
- *_©Creator By Alif Bot_*    
-➖➖➖➖➖➖➖➖➖➖➖`)
-break
-case 'topuppb':
-reply(`➖➖➖➖➖➖➖➖➖➖➖
-
-- 🎟️60 = Rp14.000
-- 🎟️120 = Rp28.000
-- 🎟️240 = Rp56.000
- 
-➖➖➖➖➖➖➖➖➖➖➖
- *_©Creator By Alif Bot_*    
-➖➖➖➖➖➖➖➖➖➖➖`)
-break
-case 'topupb':
-reply(`*🎟️POINT BLANK🎟️*
-➖➖➖➖➖➖➖➖➖➖➖
-
-_tidak tersedia, ke Indomaret Sono_
+belom ada list
  
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
+reply(`yang mau donasi bisa ketik*`)
 break
+case 'topuppubg':
+reply(`*💎DIAMOND FREE FIRE💎*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(`yang mau donasi bisa ketik*`)
+break
+case 'topuppb':
+reply(`➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(`yang mau donasi bisa ketik*`)
+break
+
 case 'topupgopay':
 reply(`_chat owner_`)
 break

@@ -335,7 +335,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
     const fkontak = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `@Ramdanigns`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;@Ramdanigns,;;;\nFN:@Ramdanigns,\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`), thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), senRamdanifhemeral: true } } }
     var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
     const replylinkig = (teks) => {
-      Ramdani.sendMessage(from, teks, text, { sendEphemeral: true, quoted: ftroli, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `Hiii ${pushname}`, body: "", mediaType: "2", thumbnail: thumbnail, mediaUrl: `https://www.instagram.com/muhammadramdani196453` } } })
+      Ramdani.sendMessage(from, teks, text, { sendEphemeral: true, quoted: ftroli, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `Hiii ${pushname}`, body: "", mediaType: "2", thumbnail: thumbnail, mediaUrl: `https://www.instagram.com/alifananta5` } } })
     }
     const fakeitem = (teks) => {
       Ramdani.sendMessage(from, teks, text, {
@@ -383,7 +383,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DON'T CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/p/6285890617231` } } })
     }
     const reply = (teks) => {
-      Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DONT CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/${control.NomorOwner}?text=Halo Tuan` } } })
+      Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DONT CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/${control.NomorOwner}?text=Halo bang gua udah ` } } })
     }
     const fakestatus = (teks) => {
       Ramdani.sendMessage(from, teks, text, {
@@ -1576,7 +1576,7 @@ jika menu tidak muncul silahkan ketik .allmenu untuk menampilkan menu
               title: `halo kak👋 ${pushname} `,
               body: `${ucapanWaktu} Semoga harimu menyenangkan`,
               mediaType: 2,
-              mediaUrl: "https://www.instagram.com/muhammadramdani196453",
+              mediaUrl: "https://www.instagram.com/alifananta5",
               thumbnail: fs.readFileSync('./foto/menu.jpg'),
             }, forwardingScore: 508, isForwarded: true, mentionedJid: [Tag + '@s.whatsapp.net', senderr]                        
           }
@@ -2411,6 +2411,11 @@ break
                   "rowId": "/jokigame"
                 },
                 {
+                  "title": "GB PB",
+                  "description": `Menampilkan Fitur GB PB`,
+                  "rowId": "/gbpb"
+                },
+                {
                   "title": "TOP UP SALDO",
                   "description": `Menampilkan Fitur Top Up Saldo`,
                   "rowId": "/topupsaldo"
@@ -2512,24 +2517,20 @@ break
   
                   {
                     "title": "MOBILE LEGENDS",
-                    "description": `Menampilkan Fitur Top Up Ml`,
+                    "description": `Menampilkan Fitur JOKI Ml`,
                     "rowId": "/jokiml"
                   },
                   {
                     "title": "FREE FIRE",
-                    "description": `Menampilkan Fitur Top Up Ff`,
+                    "description": `Menampilkan Fitur JOKI Ff`,
                     "rowId": "/jokiff"
                   },
                   {
                     "title": "PUBG",
-                    "description": `Menampilkan Fitur Top Up Pubg`,
+                    "description": `Menampilkan Fitur JOKI Pubg`,
                     "rowId": "/jokipubg"
-                  },
-                  {
-                    "title": "POINT BLANK",
-                    "description": `Menampilkan Fitur Top Up Pb`,
-                    "rowId": "/jokipb"
-                  }                                
+                  }
+                                                 
                   
   
   
@@ -2546,6 +2547,44 @@ break
           }
           Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
           break
+          case 'gbpb':
+            stod = `${sender}`
+            listMsg = {
+              buttonText: 'Click Here',
+              footerText: `© Creator By Alif Bot`,
+              description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+              sections: [
+                {
+                  "title": `Jangan Lupa Donasi Ya Jing`,
+                  rows: [
+    
+                    {
+                      "title": "POINT BLANK",
+                      "description": `Menampilkan Fitur GB  Exp Pb`,
+                      "rowId": "/gbexppb"
+                    },
+                    {
+                      "title": "POINT BLANK",
+                      "description": `Menampilkan Fitur GB  KD Pb`,
+                      "rowId": "/gbkdpb"
+                    }
+                                                   
+                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                  ]
+                }],
+              listType: 1
+            }
+            Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
+            break
         case 'topupsaldo':
         stod = `${sender}`
         listMsg = {
@@ -2595,7 +2634,7 @@ break
         break
         /////CASEEEEE NYAAAH BWANG
         case 'igowner':
-        reply(`*https://www.instagram.com/muhammadramdani196453*`)
+        reply(`*https://www.instagram.com/alifananta5*`)
         break
         case 'totalfitur':
         case 'total fitur':
@@ -2715,7 +2754,9 @@ belom ada list
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
-reply(`yang mau bayar bisa ketik*`)
+reply(` mau bayar ka? klik atasnya ka`)
+
+
 break
 case 'topupff':
 reply(`*💎DIAMOND FREE FIRE💎*
@@ -2726,10 +2767,10 @@ belom ada list
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
-reply(`yang mau donasi bisa ketik*`)
+reply(` mau bayar ka? klik atasnya ka`)
 break
 case 'topuppubg':
-reply(`*💎DIAMOND FREE FIRE💎*
+reply(`*💎DIAMOND PUBG💎*
 ➖➖➖➖➖➖➖➖➖➖➖
 
 belom ada list
@@ -2737,7 +2778,7 @@ belom ada list
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
-reply(`yang mau donasi bisa ketik*`)
+reply(` mau bayar ka? klik atasnya ka`)
 break
 case 'topuppb':
 reply(`➖➖➖➖➖➖➖➖➖➖➖
@@ -2747,8 +2788,70 @@ belom ada list
 ➖➖➖➖➖➖➖➖➖➖➖
  *_© Creator By Alif Bot_*    
 ➖➖➖➖➖➖➖➖➖➖➖`)
-reply(`yang mau donasi bisa ketik*`)
+reply(` mau bayar ka? klik atasnya ka`)
 break
+
+case 'jokiml':
+reply(`*JOKI ML*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(` mau bayar ka? klik atasnya ka`)
+
+
+break
+case 'jokiff':
+reply(`*JOKI FREE FIRE*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(` mau bayar ka? klik atasnya ka`)
+break
+case 'jokipubg':
+reply(`*JOKI PUBG*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(` mau bayar ka? klik atasnya ka`)
+break
+
+case 'gbexppb':
+reply(`*GB EXP PB*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(` mau bayar ka? klik atasnya ka`)
+break
+
+case 'gbkdpb':
+reply(`*GB KD PB*
+➖➖➖➖➖➖➖➖➖➖➖
+
+belom ada list
+ 
+➖➖➖➖➖➖➖➖➖➖➖
+ *_© Creator By Alif Bot_*    
+➖➖➖➖➖➖➖➖➖➖➖`)
+reply(` mau bayar ka? klik atasnya ka`)
+
+break
+
 
 case 'topupgopay':
 reply(`_chat owner_`)

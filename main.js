@@ -107,7 +107,7 @@ console.log(color(`${spc4}                       < =============================
     ]
 
     buttonMessagee = {
-        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT RAMDANI OFFICIAL`,
+        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT Alif Ananta`,
         footerText: `©${control.watermark2}`,
         buttons: buttonss,
         headerType: 1

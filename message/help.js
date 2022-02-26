@@ -1,8 +1,9 @@
 
 {
-  botname = "RAMDANI BOTZ"
+  botname = "ALIF BOTZ"
 
 
+  
   exports.apkmenu = (prefix) => {
     return `
 ╭──⬣「APK MENU  」⬣
@@ -487,7 +488,7 @@ KIRIM GAMBAR TRUS REPLY DENGAN COMMAND DIATAS
   exports.rules = (prefix) => {
     return `
  ╔════════ ≪ °❈° ≫ ════════╗  
-   RULES RAMDANI BOTZ 
+   RULES ALIF BOTZ 
    1. Dilarang spam
    2. Jangan Telpon Bot
    3. Chat Owner Jika penting
@@ -669,6 +670,3 @@ g│❏ヅ${prefix}image
   }
 
 }
-
-
-

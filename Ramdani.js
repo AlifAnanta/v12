@@ -5360,7 +5360,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/fuckboy?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/fuckboy?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5370,7 +5370,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/fuckgirl?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/fuckgirl?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5380,7 +5380,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/bucinserti?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/bucinserti?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5392,7 +5392,7 @@ case 'ytplay':
         ct = args.join(' ')
         dap1 = ct.split('|')[0]
         dap2 = ct.split('|')[1]
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/pacarserti?apikey=Ramdani&name1=${dap1}&name2=${dap2}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/pacarserti?apikey=${control.lolkey}&name1=${dap1}&name2=${dap2}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5402,7 +5402,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/goodboy?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/goodboy?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5412,7 +5412,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/goodgirl?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/goodgirl?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5422,7 +5422,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/badboy?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/badboy?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5432,7 +5432,7 @@ case 'ytplay':
         if (args.length < 1) return reply(`text mana broh?\ncontoh ${prefix + command} ${pushname}`)
 
         addit = args.join(' ')
-        aditty = await getBuffer(`https://api.lolhuman.xyz/api/badgirl?apikey=Ramdani&name=${addit}`)
+        aditty = await getBuffer(`https://api.lolhuman.xyz/api/badgirl?apikey=${control.lolkey}&name=${addit}`)
         Ramdani.sendMessage(from, aditty, image, { quoted: fgif })
 
         break
@@ -5543,6 +5543,7 @@ case 'ytplay':
       case 'infogempa':
         get_result = await fetchJson(`http://api.lolhuman.xyz/api/infogempa?apikey=${control.lolkey}`)
         get_result = get_result.result
+        
         ini_txt = `Lokasi : ${get_result.lokasi}\n`
         ini_txt += `Waktu : ${get_result.waktu}\n`
         ini_txt += `Potensi : ${get_result.potensi}\n`
@@ -5556,7 +5557,7 @@ case 'ytplay':
       case 'jadwaltv':
         if (args.length == 0) return reply(`Contoh: ${prefix + command} RCTI`)
         channel = args[0]
-        get_result = await fetchJson(`http://api.lolhuman.xyz/api/jadwaltv/channel?apikey=Ramdani`)
+        get_result = await fetchJson(`http://api.lolhuman.xyz/api/jadwaltv/channel?apikey=${control.lolkey}`)
         get_result = get_result.result
         ini_txt = `Jadwal TV ${channel.toUpperCase()}\n`
         for (var x in get_result) {
@@ -5576,7 +5577,7 @@ case 'ytplay':
 
         pesannya = `🐣Info Corona Global🐣\n\n🐣Positif : ${inf.result.positif}\n\n🐥Meninggal : ${inf.result.meninggal}\n\n🐥Sembuh : ${inf.result.sembuh}\n\n🐥Dirawat : ${inf.result.dirawat}`
 
-        sendButMessage(from, pesannya, `Created Ramdani`, [
+        sendButMessage(from, pesannya, `Created Alif`, [
           {
             buttonId: ".command",
             buttonText: {

@@ -2,7 +2,7 @@ const { WAConnection: _WAConnection, MessageType, Presence, Mimetype, ChatModifi
 const simple = require('./lib/simple.js')
 const WAConnection = simple.WAConnection(_WAConnection)
 const Ramdani = new WAConnection()
-
+const qrcode = require("qrcode-terminal")
 const moment = require("moment-timezone")
 const fs = require("fs")
 const spin = require('spinnies')
@@ -67,28 +67,28 @@ spins = getGlobalSpinner(false)
 
 
 const starts = async (Ramdani = new WAConnection()) => {
-    CFonts.say(`ALIF ANANTA`, {
+    CFonts.say(`RAMDANI OFFICIAL`, {
         font: 'chrome',
         align: 'center',
         gradient: ['red', 'magenta']
       })
     Ramdani.logger.level = 'warn'
     
-    console.log(color(`${spc2}           [ • CREATOR BY ALIF ANANTA• ]` ,'cyan'))
+    console.log(color(`${spc2}           [ • CREATOR BY RAMDANI OFC• ]` ,'cyan'))
 console.log(color(`${spc4}                       < ================================================== >`, 'purple'))
-console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Hai         : ALIF ANANTA`, 'yellow'))
+console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Hai         : Alif Ananta`, 'yellow'))
 console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Bot Version : 12.0.0`, 'yellow'))
 console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Status      : Online!`, 'yellow'))
-console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Owner       : ALIF ANANTA`, 'yellow'))
+console.log(color(`${spc3}                    [•]`, 'aqua'), color(`Owner       : Alif Ananta`, 'yellow'))
 console.log(color(`${spc4}                       < ================================================== >`, 'purple'))
 
 
 
-    Ramdani.browserDescription = ['CONNECT TO ALIF ANANTA', 'Aliho', '5.4.4']
+    Ramdani.browserDescription = ['CONNECT TO Alif Ananta', 'Aliho', '5.4.4']
 
     Ramdani.on('qr', () => {
-		console.log(color('[', 'pink'), color('!', 'red'), color(']', 'pink'), color('SCAN KODE NYA WAKTU 20 DETIK!'))
-	})
+        console.log(color('[', 'yellow'), color('!', 'red'), color(']', 'yellow'), color(' Scan bang'))
+    })
 
     fs.existsSync('./sessions.json') && Ramdani.loadAuthInfo('./sessions.json')
     Ramdani.on('connecting', () => {
@@ -107,7 +107,7 @@ console.log(color(`${spc4}                       < =============================
     ]
 
     buttonMessagee = {
-        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT ALIF ANANTA`,
+        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT Alif Ananta`,
         footerText: `©${control.watermark2}`,
         buttons: buttonss,
         headerType: 1
@@ -296,16 +296,15 @@ console.log(color(`${spc4}                       < =============================
         }
     })
 
-//    Ramdani.on('CB:action,,call', async json => {
-//        const callerId = json[2][0][1].from;
-//        var vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + `${NamaOwner}` + '\n' + `ORG:Developer ${NamaBot}\n` + 'TEL;type=CELL;type=VOICE;waid=' + `${NomorOwner}` + ':+' + `${NomorOwner}` + '\n' + 'END:VCARD'
-//        Ramdani.sendMessage(callerId, "\`\`\`[ ! ] CALL DETECTED [ ! ]\`\`\`\n\n\`\`\`Anda Di Block Karena Telepon Bot , Silahkan Hubungi Developer Bot Untuk Membuka Block\`\`\`", MessageType.text)
-//        Ramdani.sendMessage(callerId, { displayname: `${NamaOwner}`, vcard: vcard }, MessageType.contact, { contextInfo: { externalAdReply: { title: `Developer ${NamaBot}`, body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./foto/Ramdani.jpg'), sourceUrl: `https://wa.me/6285890617231?text=Assalamualaikum` } } })
-//        await sleep(5000)
-//        await Ramdani.blockUser(callerId, "add")
-//    })
- }
-
+    Ramdani.on('CB:action,,call', async json => {
+        const callerId = json[2][0][1].from;
+        var vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + `${NamaOwner}` + '\n' + `ORG:Developer ${NamaBot}\n` + 'TEL;type=CELL;type=VOICE;waid=' + `${NomorOwner}` + ':+' + `${NomorOwner}` + '\n' + 'END:VCARD'
+        Ramdani.sendMessage(callerId, "\`\`\`[ ! ] CALL DETECTED [ ! ]\`\`\`\n\n\`\`\`Anda Di Block Karena Telepon Bot , Silahkan Hubungi Developer Bot Untuk Membuka Block\`\`\`", MessageType.text)
+        Ramdani.sendMessage(callerId, { displayname: `${NamaOwner}`, vcard: vcard }, MessageType.contact, { contextInfo: { externalAdReply: { title: `Developer ${NamaBot}`, body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./foto/Ramdani.jpg'), sourceUrl: `https://wa.me/6289501060783?text=Assalamualaikum` } } })
+        await sleep(5000)
+        await Ramdani.blockUser(callerId, "add")
+    })
+}
 
 console.clear()
 var progressBar, progress = 0;

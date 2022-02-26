@@ -20,7 +20,7 @@
   "author": "Ramdani Official",
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.2",
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "@vitalets/google-translate-api": "^7.0.0",
     "awesome-phonenumber": "^2.54.0",
     "axios": "^0.21.1",
@@ -61,6 +61,11 @@
     "uninstall": "0.0.0",
     "ytsr": "^3.5.0"
   },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
+  },
+  
   "devDependencies": {},
   "repository": {
     "type": "git",

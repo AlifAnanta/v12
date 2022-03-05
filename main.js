@@ -39,7 +39,11 @@ require('./Ramdani.js')
 nocache('./Ramdani.js', module => console.log(`${module} is now updated!`))
 //button nya
 
+<<<<<<< HEAD
 const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 10, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `【ALIF BOTZ】`, orderTitle: 'ALIFANANTA', sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, sendEphemeral: true }
+=======
+const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 10, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `【RAMDANI BOTZ】`, orderTitle: 'Ramdanipratama', sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, sendEphemeral: true }
+>>>>>>> b0cf957c22125120301e44c3cac7fe6b51322ddc
 const spinner = {
     "interval": 0.00000003,
     "frames": [
@@ -67,7 +71,7 @@ spins = getGlobalSpinner(false)
 
 
 const starts = async (Ramdani = new WAConnection()) => {
-    CFonts.say(`ALIF BOTZ`, {
+    CFonts.say(`RAMDANI OFFICIAL`, {
         font: 'chrome',
         align: 'center',
         gradient: ['red', 'magenta']
@@ -84,7 +88,7 @@ console.log(color(`${spc4}                       < =============================
 
 
 
-    Ramdani.browserDescription = ['Alif Ananta', 'crome', '3.0.0']
+    Ramdani.browserDescription = ['CONNECT TO Alif Ananta', 'Aliho', '5.4.4']
 
     Ramdani.on('qr', () => {
         console.log(color('[', 'yellow'), color('!', 'red'), color(']', 'yellow'), color(' Scan bang'))
@@ -199,7 +203,7 @@ console.log(color(`${spc4}                       < =============================
             	num = anu.participants[0]
                 let v = Ramdani.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
-                let buff = await getBuffer(`https://api.lolhuman.xyz/api/base/welcome?apikey=928afd11993f5ee29d5798f0&img1=${ppimg}&img2=${pp_grup}&background=https://telegra.ph/file/fcb183f0e234722c1a8d2.jpg&username=${encodeURI(anu_user)}&member=${memeg}&groupname= ${encodeURI(mdata.subject)}`)
+                let buff = await getBuffer(`https://api.lolhuman.xyz/api/base/welcome?apikey=13710ff963cb90b9a88fb436&img1=${ppimg}&img2=${pp_grup}&background=https://telegra.ph/file/fcb183f0e234722c1a8d2.jpg&username=${encodeURI(anu_user)}&member=${memeg}&groupname= ${encodeURI(mdata.subject)}`)
                 masuk = `Halo @${num.split('@')[0]}\nSelamat Datang Di ${mdata.subject}`
                 gbutsan = [{ buttonId: 'SERAH', buttonText: { displayText: '👋Welcome' }, type: 1 }]
                 mhan = await Ramdani.prepareMessage(mdata.id, buff, MessageType.image, { thumbnail: buff })
@@ -230,7 +234,7 @@ console.log(color(`${spc4}                       < =============================
             	num = anu.participants[0]
                 let v = Ramdani.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
-                let buff = await getBuffer(`https://api.lolhuman.xyz/api/base/leave?apikey=928afd11993f5ee29d5798f0&img1=${ppimg}&img2=${pp_grup}&background=https://telegra.ph/file/fcb183f0e234722c1a8d2.jpg&username=${encodeURI(anu_user)}&member=${memeg}&groupname=${encodeURI(mdata.subject)}`)
+                let buff = await getBuffer(`https://api.lolhuman.xyz/api/base/leave?apikey=13710ff963cb90b9a88fb436&img1=${ppimg}&img2=${pp_grup}&background=https://telegra.ph/file/fcb183f0e234722c1a8d2.jpg&username=${encodeURI(anu_user)}&member=${memeg}&groupname=${encodeURI(mdata.subject)}`)
                 keluar = `Selamat tinggal @${num.split('@')[0]}\nSemoga tenang disana`
                 gbutsan = [{ buttonId: 'SERAH', buttonText: { displayText: '👋Byee' }, type: 1 }]
                 mhan = await Ramdani.prepareMessage(mdata.id, buff, MessageType.image, { thumbnail: buff })

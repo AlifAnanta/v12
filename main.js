@@ -39,7 +39,7 @@ require('./Ramdani.js')
 nocache('./Ramdani.js', module => console.log(`${module} is now updated!`))
 //button nya
 
-const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 10, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `【ALIF BOTZ】`, orderTitle: 'Ramdanipratama', sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, sendEphemeral: true }
+const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 10, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `【ALIF BOTZ】`, orderTitle: 'ALIFANANTA', sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, sendEphemeral: true }
 const spinner = {
     "interval": 0.00000003,
     "frames": [
@@ -107,7 +107,7 @@ console.log(color(`${spc4}                       < =============================
     ]
 
     buttonMessagee = {
-        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT Alif Ananta`,
+        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT ALIF ANANTA`,
         footerText: `©${control.watermark2}`,
         buttons: buttonss,
         headerType: 1

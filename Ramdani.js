@@ -75,7 +75,7 @@ LolApi = "${control.lolkey}" //Ganti sama Api lu
 zenzapi = "LordRamdani"
 xteamkey = "7415bc4287ad5ca8"
 target = `${control.NomorOwner}@s.whatsapp.net` //Ganti jadi nomor lu
-watermark = `${control.NamaBot2}`
+watermark = `${control.NamaBot}`
 thumbnail = fs.readFileSync(`./foto/Ramdani.jpg`)
 
 const { getBuffer, getGroupAdmins, getRandom, runtime, sleep } = require('./lib/myfunc')
@@ -256,7 +256,6 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
     const ownerNumber = control.NomorOwner
     const ownerName = control.NamaOwner
     const botName = control.NamaBot
-    const botName2 = control.NamaBot2
     const isGroup = from.endsWith('@g.us')
     let sender = isGroup ? Ramdanif.participant : Ramdanif.key.remoteJid
     let senderr = Ramdanif.key.fromMe ? Ramdani.user.jid : Ramdanif.key.remoteJid.endsWith('@g.us') ? Ramdanif.participant : Ramdanif.key.remoteJid
@@ -326,14 +325,14 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
 
     timestampe = speed();
     latensie = speed() - timestampe
-    const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 99999999999, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `Runtime:${runtime(process.uptime())}   `, orderTitle: `${control.NamaBot2}`, sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, senRamdanifhemeral: true }
-    const fdoc = { key: { participant: '0@s.whatsapp.net' }, message: { documentMessage: { title: `${control.NamaBot2}`, jpegThumbnail: fs.readFileSync(`./foto/Ramdani.jpg`) } } }
+    const ftroli = { key: { fromMe: false, "participant": "0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": { orderMessage: { itemCount: 99999999999, status: 200, thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), surface: 200, message: `Runtime:${runtime(process.uptime())}   `, orderTitle: `${control.NamaBot}`, sellerJid: '0@s.whatsapp.net' } }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, senRamdanifhemeral: true }
+    const fdoc = { key: { participant: '0@s.whatsapp.net' }, message: { documentMessage: { title: `${control.NamaBot}`, jpegThumbnail: fs.readFileSync(`./foto/Ramdani.jpg`) } } }
     const fvn = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "audioMessage": { "mimetype": "audio/ogg; codecs=opus", "seconds": 99999, "ptt": "true" } } }
-    const fgif = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": `${control.NamaBot2}`, "h": `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': `${control.NamaBot2}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
-    const fgclink = { key: { participant: "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net" }, "message": { "groupInviteMessage": { "groupJid": "6288213840883-1616169743@g.us", "inviteCode": "m", "groupName": "P", "caption": `${control.NamaBot2}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
-    const fvideo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": `${control.NamaBot2}`, "h": `Hmm`, 'seconds': '99999', 'caption': `${control.NamaBot2}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
+    const fgif = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": `${control.NamaBot}`, "h": `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': `${control.NamaBot}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
+    const fgclink = { key: { participant: "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net" }, "message": { "groupInviteMessage": { "groupJid": "6288213840883-1616169743@g.us", "inviteCode": "m", "groupName": "P", "caption": `${control.NamaBot}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
+    const fvideo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": `${control.NamaBot}`, "h": `Hmm`, 'seconds': '99999', 'caption': `${control.NamaBot}`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`) } } }
     const floc = { key: { participant: '0@s.whatsapp.net' }, message: { locationMessage: { name: `Runtime :${runtime(process.uptime())}\n   Speed :${latensie.toFixed(4)} detik `, jpegThumbnail: fs.readFileSync(`./foto/Ramdani.jpg`) } } }
-    const fkontak = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `@Ramdanigns`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;@Ramdanigns,;;;\nFN:@Ramdanigns,\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`), thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), senRamdanifhemeral: true } } }
+    const fkontak = { key: { participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `@Alif`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;@Alif,;;;\nFN:@Alif,\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(`./foto/Ramdani.jpg`), thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`), senRamdanifhemeral: true } } }
     var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
     const replylinkig = (teks) => {
       Ramdani.sendMessage(from, teks, text, { sendEphemeral: true, quoted: ftroli, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `Hiii ${pushname}`, body: "", mediaType: "2", thumbnail: thumbnail, mediaUrl: `https://www.instagram.com/alifananta5` } } })
@@ -346,7 +345,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
             participant: `0@s.whatsapp.net`, ...(from ? {
               remoteJid: "6289523258649-1604595598@g.us"
             } : {})
-          }, message: { "orderMessage": { "orderId": "174238614569481", "thumbnail": fs.readFileSync(`./foto/Ramdani.jpg`), "itemCount": 10, "status": "INQUIRY", "surface": "CATALOG", "message": `${control.NamaBot2}`, "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==" } }
+          }, message: { "orderMessage": { "orderId": "174238614569481", "thumbnail": fs.readFileSync(`./foto/Ramdani.jpg`), "itemCount": 10, "status": "INQUIRY", "surface": "CATALOG", "message": `${control.NamaBot}`, "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==" } }
         }, contextInfo: { "forwardingScore": 999, "isForwarded": true }, senRamdanifhemeral: true
       })
     }
@@ -384,7 +383,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DON'T CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/p/6285890617231` } } })
     }
     const reply = (teks) => {
-      Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DONT CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/${control.NomorOwner}?text=Halo bang gua udah ` } } })
+      Ramdani.sendMessage(from, teks, text, { thumbnail: Rfake, senRamdanifhemeral: true, quoted: Ramdanif, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: `${jmn} - ${week} ${weton} - ${calender}`, body: "DONT CLICK HERE", previewType: "PHOTO", thumbnail: ofrply, sourceUrl: `https://wa.me/${control.NomorOwner}?text=Halo Tuan` } } })
     }
     const fakestatus = (teks) => {
       Ramdani.sendMessage(from, teks, text, {
@@ -397,7 +396,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
             "imageMessage": {
               "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
               "mimetype": "image/jpeg",
-              "caption": `[Alif botz ]`,
+              "caption": `[ALIF BOTZ ]`,
               "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
               "fileLength": "28777",
               "height": 1080,
@@ -536,22 +535,22 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
     const ofrply = await getBuffer(pporang)
     const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
     if (time2 < "23:59:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴍᴀʟᴀᴍ🌃'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴍᴀʟᴀᴍ(Good Night)🌃'
     }
     if (time2 < "19:00:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sᴏʀᴇ🌃'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sᴏʀᴇ(Good Afternoon)🌃'
     }
     if (time2 < "18:00:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sᴏʀᴇ🌇'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sᴏʀᴇ(Good Afternoon)🌇'
     }
     if (time2 < "15:00:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sɪᴀɴɢ🌁'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ sɪᴀɴɢ(Good Everning)🌁'
     }
     if (time2 < "11:00:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴘᴀɢɪ🌄'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴘᴀɢɪ(Good Morning🌄'
     }
     if (time2 < "05:00:00") {
-      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴍᴀʟᴀᴍ🌆'
+      var ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴍᴀʟᴀᴍ(Good Night)🌆'
     }
     const getRegisteredRandomId = () => {
       return _registered[Math.floor(Math.random() * _registered.length)].id
@@ -617,7 +616,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanMtk(from, mtk))) {
         var htgm3 = randomNomor(1000)
         addBalance(sender, htgm3, balance)
-        await reply(`*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanMtk(from, mtk)}\n*Hadiah :* $${htgm3}\n\nIngin bermain lagi? kirim *${prefix}math*`)
+        await reply(`*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanMtk(from, mtk)}\n*Hadiah(present) :* $${htgm3}\n\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}math*`)
         mtk.splice(game.getMtkPosi(from, mtk), 1)
       }
     }
@@ -625,7 +624,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTL(from, tebaklirik))) {
         var htgml = randomNomor(100)
         addBalance(sender, htgml, balance)
-        await fakestatus(`GAME TEBAK LIRIK\n*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTL(from, tebaklirik)}\n*Hadiah :* $${htgml}\nIngin bermain lagi? kirim *${prefix}tebaklirik*`)
+        await fakestatus(`GAME TEBAK LIRIK(GUESS GAME LYRICS)\n*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTL(from, tebaklirik)}\n*Hadiah(present) :* $${htgml}\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebaklirik*`)
         tebaklirik.splice(game.getTLPosi(from, tebaklirik), 1)
       }
     }
@@ -633,7 +632,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanSA(from, siapaaku))) {
         var htgmu = randomNomor(100)
         addBalance(sender, htgmu, balance)
-        await fakestatus(`𝐆𝐀𝐌𝐄 𝐒𝐈𝐀𝐏𝐀𝐊𝐀𝐇 𝐀𝐊𝐔\n*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanSA(from, siapaaku)}\n*Hadiah :* $${htgmu}\n Ingin bermain lagi? kirim *${prefix}siapakahaku*`)
+        await fakestatus(`𝐆𝐀𝐌𝐄 𝐒𝐈𝐀𝐏𝐀𝐊𝐀𝐇 𝐀𝐊𝐔(who am i game)\n*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanSA(from, siapaaku)}\n*Hadiah(present) :* $${htgmu}\n Ingin bermain lagi? kirim(Want to play again? Send) *${prefix}siapakahaku*`)
         siapaaku.splice(game.getSAPosi(from, siapaaku), 1)
       }
     }
@@ -641,7 +640,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTK(from, tebakkata))) {
         var htgtk = randomNomor(100)
         addBalance(sender, htgtk, balance)
-        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐊𝐀𝐓𝐀\n*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTK(from, tebakkata)}\n*Hadiah :* $${htgtk}\nIngin bermain lagi? kirim *${prefix}tebakkata*`)
+        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐊𝐀𝐓𝐀(guessing game)\n*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTK(from, tebakkata)}\n*Hadiah(present) :* $${htgtk}\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebakkata*`)
         tebakkata.splice(game.getTKPosi(from, tebakkata), 1)
       }
     }
@@ -649,7 +648,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTU(from, tebakkimia))) {
         var reva = randomNomor(100)
         addBalance(sender, reva, balance)
-        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐔𝐍𝐒𝐔𝐑 𝐊𝐈𝐌𝐈𝐀\n*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTU(from, tebakkimia)}\n*Hadiah :* $${reva}\nIngin bermain lagi? kirim *${prefix}tebakkimia*`)
+        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐔𝐍𝐒𝐔𝐑 𝐊𝐈𝐌𝐈𝐀(chemical element guessing game)\n*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTU(from, tebakkimia)}\n*Hadiah(present) :* $${reva}\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebakkimia*`)
         tebakkimia.splice(game.getTUPosi(from, tebakkimia), 1)
       }
     }
@@ -657,7 +656,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTB(from, tebakbendera))) {
         var syahira = randomNomor(100)
         addBalance(sender, syahira, balance)
-        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐁𝐄𝐍𝐃𝐄𝐑𝐀\n *Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTB(from, tebakbendera)}\n*Hadiah :* $${syahira}\nIngin bermain lagi? kirim *${prefix}tebakbendera*`)
+        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐁𝐄𝐍𝐃𝐄𝐑𝐀(flag guessing game)\n *Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTB(from, tebakbendera)}\n*Hadiah(present) :* $${syahira}\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebakbendera*`)
         tebakbendera.splice(game.getTBPosi(from, tebakbendera), 1)
       }
     }
@@ -665,7 +664,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTA(from, tebakanime))) {
         var vinna = randomNomor(100)
         addBalance(sender, vinna, balance)
-        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐀𝐍𝐈𝐌𝐄\n*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTA(from, tebakanime)}\n*Hadiah :* $${vinna}\nIngin bermain lagi? kirim *${prefix}tebakanime*`)
+        await fakestatus(`𝐆𝐀𝐌𝐄 𝐓𝐄𝐁𝐀𝐊 𝐀𝐍𝐈𝐌𝐄(anime guessing game)\n*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTA(from, tebakanime)}\n*Hadiah(present) :* $${vinna}\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebakanime*`)
         tebakanime.splice(game.getTAPosi(from, tebakanime), 1)
       }
     }
@@ -673,7 +672,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       if (chats.toLowerCase().includes(game.getJawabanTG(from, tebakgambar))) {
         var htgm = randomNomor(100)
         addBalance(sender, htgm, balance)
-        await reply(`*Selamat jawaban kamu benar*\n*Jawaban :* ${game.getJawabanTG(from, tebakgambar)}\n*Hadiah :* $${htgm}\n\nIngin bermain lagi? kirim *${prefix}tebakgambar*`)
+        await reply(`*Selamat jawaban kamu benar(Congratulations your answer is correct)*\n*Jawaban(Answer) :* ${game.getJawabanTG(from, tebakgambar)}\n*Hadiah(present) :* $${htgm}\n\nIngin bermain lagi? kirim(Want to play again? Send) *${prefix}tebakgambar*`)
         tebakgambar.splice(game.getTGPosi(from, tebakgambar), 1)
       }
     }
@@ -684,7 +683,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
         if (budy.toLowerCase().includes(i)) {
           var htgmp = Math.floor(Math.random() * 20) + 1
           atm.addKoinUser(sender, htgmp, _uang)
-          await reply(`*Jawaban benar*\n*Jawaban :* ${i}\n*Hadiah :* $${htgmp}\n*Jawaban yang blum tertebak :* ${anjuy.length - 1}`)
+          await reply(`*Jawaban benar*\n*Jawaban(Answer) :* ${i}\n*Hadiah(present) :* $${htgmp}\n*Jawaban yang blum tertebak :* ${anjuy.length - 1}`)
           var anug = anjuy.indexOf(i)
           anjuy.splice(anug, 1)
         }
@@ -770,7 +769,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
         fetch(link).then((hasil) => {
           Ramdani.sendMessage(from, hasil, type, options).catch(e => {
             Ramdani.sendMessage(from, { url: link }, type, options).catch(e => {
-              reply('_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim Media_')
+              reply('_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim Media(Error Failed To Download And Send Media)_')
               console.log(e)
             })
           })
@@ -940,7 +939,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
           let potions = i.potion
           if (potions >= potionawal) {
             position = true
-            Ramdani.sendMessage(from, `Beli Potion ngab di /buypotion`, text, { quoted: Ramdanif })
+            Ramdani.sendMessage(from, `Beli Potion ngab di(Buy Potion at) /buypotion`, text, { quoted: Ramdanif })
             return true
           } else {
             _potion
@@ -961,7 +960,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
       for (let potionlmt of _potion) {
         if (potionlmt.id === sender) {
           potionCounts = potionawal - potionlmt.potion
-          if (potionCounts <= 0) return Ramdani.sendMessage(from, `ya udah habis potion kamu\n\n_Note : tenang limit bisa dibeli dengan cara ${prefix}buypotion_`, text, { quoted: Ramdanif })
+          if (potionCounts <= 0) return Ramdani.sendMessage(from, `ya udah habis potion kamu(Yes, you've run out of potions)\n\n_Note : tenang limit bisa dibeli dengan cara(calm down limit can be purchased by way of) ${prefix}buypotion_`, text, { quoted: Ramdanif })
           Ramdani.sendMessage(from, `POTION : ${potionCounts}`, text, { quoted: Ramdanif })
           foundh = true
         }
@@ -1123,7 +1122,7 @@ module.exports = Ramdani = async (Ramdani, Ramdanif) => {
     //--------------------[ANTI TOXIC]--------------------\\
     if (bad.includes(messagesD)) {
       kntl = `${args.join(' ')}`
-      nama = ("MULUT JAGA!!")
+      nama = ("jangan kasar")
       impostor = ("NIH PERGI KE ARAB, TOBAT SONO\nSUPAYA GAK TOXIC")
       Ramdani.sendMessage(from, {
         degreesLatitude: 21.422487, degreesLongitude: 39.826206,
@@ -1250,7 +1249,7 @@ if (isGroup) {
         var kic = `${sender.split("@")[0]}@s.whatsapp.net`
         setTimeout(() => {
           Ramdani.groupRemove(from, [kic]).catch((e) => { Ramdani.reply(from, global.db.mess.BotAdmin, Ramdanif) })
-          Ramdani.sendMessage(`6285890617231@s.whatsapp.net`, `wa.me/${sender.split("@")[0]}\n telah mengirim Virtex ❗`, MessageType.text, { contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: "Alif botz", body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./foto/Ramdani.jpg'), sourceUrl: "https://wa.me/6285890617231" } } })
+          Ramdani.sendMessage(`6285890617231@s.whatsapp.net`, `wa.me/${sender.split("@")[0]}\n telah mengirim Virtex ❗`, MessageType.text, { contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: "ALIF BOTZ", body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./foto/Ramdani.jpg'), sourceUrl: "https://wa.me/6285890617231" } } })
         }, 7000)
         setTimeout(() => {
           Ramdani.sendMessage(from, '_1 Detik lagi..._', text, { quoted: fkontak })
@@ -1376,7 +1375,7 @@ if (isGroup) {
             headerType: 1
           }
           Ramdani.sendMessage(from, buttonMessagee, MessageType.buttonsMessage, {
-            caption: `${control.NamaBot2}`,
+            caption: `${control.NamaBot}`,
             "contextInfo": {
               text: 'hi',
               "forwardingScore": 1000000000,
@@ -1528,9 +1527,10 @@ if (isGroup) {
         const jumlahUser = _registered.push(sender)
         const hit = hit_today.push(command)
         wibu = `*BOT AKTIF*`
-        sendButMessage(from, wibu, `\nRuntime : *${runtime(process.uptime())}*\nSpeed : *${latensie.toFixed(4)} _Second_*\nTotal User : ${jumlahUser}\nHit Bot : ${hit}\nKlik Menu Untuk Menampilkan Menu Bot`, [
+        sendButMessage(from, wibu, `\nRuntime : *${runtime(process.uptime())}*\nSpeed : *${latensie.toFixed(4)} _Second_*\nTotal User : ${jumlahUser}\nHit Bot : ${hit}\nKlik Menu Untuk Menampilkan Menu Bot(Click Menu To Show Bot Menu)`, [
           {
             buttonId: `${prefix}menu`,
+			buttonId: `${prefix}m`,
             buttonText: {
               displayText: `MENU`,
             },
@@ -1538,251 +1538,96 @@ if (isGroup) {
           },]);
         break;
 
+
       case 'menu':
-      case 'help':
       case 'm':
-      case 'h':
-      case 'danz':
-        const boy = "6285890617231@s.whatsapp.net"
-        const filename = `@${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
-        const nomoruser = `${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
-        parseMention = (text = '') => {
-          return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
-        }
-        totalChat = await Ramdani.chats.all()
-        groups = Ramdani.chats.array.filter(v => v.jid.endsWith('g.us'))
-        privat = Ramdani.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-        total = math(`${groups.length}*${privat.length}`)
-        timestampe = speed();
-        latensie = speed() - timestampe
-        menu = `halo kak saya ${control.NamaBot2}`
-        buttons = [{ buttonId: `${prefix}command`, buttonText: { displayText: 'sɪᴍᴘʟᴇ ᴍᴇɴᴜ' }, type: 1 }, { buttonId: `${prefix}donate`, buttonText: { displayText: 'ᴅᴏɴᴀsɪ' }, type: 1 }]
-
-        imageMsg = (await Ramdani.prepareMessageMedia(fs.readFileSync(`./foto/Ramdani.jpg`), 'imageMessage', { thumbnail: fs.readFileSync(`./foto/Ramdani.jpg`) })).imageMessage
-
-        buttonsMessage = {
-          contentText: `${menu}`,
-          footerText:
-            `
-jika menu tidak muncul silahkan ketik .allmenu untuk menampilkan menu
-© Creator By Alif bot
-        `, imageMessage: imageMsg,
-          buttons: buttons,
-          headerType: 4
-        }
-
-        prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, {
-          quoted: ftroli, contextInfo: {
-            mentionedJid: parseMention(menu), externalAdReply: {
-              title: `halo kak👋 ${pushname} `,
-              body: `${ucapanWaktu} Semoga harimu menyenangkan`,
-              mediaType: 2,
-              mediaUrl: "https://www.instagram.com/alifananta5",
-              thumbnail: fs.readFileSync('./foto/menu.jpg'),
-            }, forwardingScore: 508, isForwarded: true, mentionedJid: [Tag + '@s.whatsapp.net', senderr]                        
-          }
-        })
-        Ramdani.relayWAMessage(prep)
-        break
-      case 'command':
-      case 'c':
         stod = `${sender}`
         listMsg = {
           buttonText: 'Click Here',
           footerText: `© Creator By Alif Bot`,
-          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello sis, please vote here mr/s, don't spam, mr/s)`,
           sections: [
             {
-              "title": `Jangan Lupa Donasi Ya Jing`,
+              "title": `Donasi nya boleh om(Donate bro)`,
               rows: [
 
                 {
-                  "title": "DONASI",
-                  "description": `Menampilkan Donasi`,
+                  "title": "DONASI(DONATE)",
+                  "description": `Menampilkan Donasi(Show Donation)`,
                   "rowId": "/donate"
                 },
                 {
                   "title": "OWNER",
-                  "description": `Menampilkan No Owner Bot`,
+                  "description": `Menampilkan No Owner Bot(Show Number Owner Bot)`,
                   "rowId": "/owner"
                 },
                 {
                   "title": "STORE MENU",
-                  "description": `Menampilkan Store Menu`,
+                  "description": `Menampilkan Store Menu(Show Store Menu)`,
                   "rowId": "/storemenu"
                 },
+
                 
                 {
                   "title": "GROUP MENU",
-                  "description": `Menampilkan Group Menu`,
+                  "description": `Menampilkan Group Menu(Show Group Menu)`,
                   "rowId": "/grupmenu"
                 },
                 {
                   "title": "DOWNLOAD MENU",
-                  "description": `Menampilkan Download Menu`,
+                  "description": `Menampilkan Download Menu(Show Download Menu)`,
                   "rowId": "/downloadmenu"
                 },
                 {
                   "title": "OWNER MENU",
-                  "description": `Menampilkan Owner Menu`,
+                  "description": `Menampilkan Owner Menu(Show Owner Menu)`,
                   "rowId": "/ownermenu"
-                },
-                {
-                  "title": "APK MENU",
-                  "description": `Menampilkan Apk Menu`,
-                  "rowId": "/apkmenu"
-                },
-                {
-                  "title": "RPG MENU",
-                  "description": `Perang perangan`,
-                  "rowId": "/rpgmenu"
-                },
-                {
-                  "title": "GAME MENU",
-                  "description": `Menampilkan Game Menu`,
-                  "rowId": "/gamemenu"
-                },
-                {
-                  "title": "ANONYMOUS",
-                  "description": `Menampilkan Anonymous Menu`,
-                  "rowId": "/anon"
-                },
-                {
-                  "title": "KERANG MENU",
-                  "description": `Menampilkan Kerang Menu`,
-                  "rowId": "/kerangmenu"
-                },
-                {
-                  "title": "MAKER MENU",
-                  "description": `Menampilkan Maker Menu`,
-                  "rowId": "/makermenu"
-                },
-                {
-                  "title": "FUN MENU",
-                  "description": `Menampilkan Fun Menu`,
-                  "rowId": "/funmenu"
-                },
-                {
-                  "title": "ISLAM MENU",
-                  "description": `Menampilkan Islam Menu`,
-                  "rowId": "/islammenu"
-                },
-                {
-                  "title": "ANIME MENU",
-                  "description": `Menampikan Anime menu`,
-                  "rowId": "/animemenu"
-                },
-                {
-                  "title": "EPHOTO 360",
-                  "description": `Menampilkan Ephoto 360 Menu`,
-                  "rowId": "/ephoto360"
-                },
-                {
-                  "title": "EPHOTO OXY",
-                  "description": `Menampikan Ephoto Oxy Menu`,
-                  "rowId": "/ephotooxy"
-                },
+                }, 
+                
                 {
 
                   "title": "INFO MENU",
-                  "description": `Menampikan Info Menu`,
+                  "description": `Menampikan Info Menu(Show Info Menu)`,
                   "rowId": "/infomenu"
                 },
-                {
-                  "title": "FILM MENU",
-                  "description": `Menampikan Film Menu`,
-                  "rowId": "/filmmenu"
-                },
+                
                 {
                   "title": "OTHER MENU",
-                  "description": `Menampikan Other Menu`,
+                  "description": `Menampikan Other Menu(Show Other Menu)`,
                   "rowId": "/othermenu"
-                },
-                {
-                  "title": "BERBURU & MALING",
-                  "description": `Menampikan Berburu & Maling Menu`,
-                  "rowId": "/tembakmenu"
-                },
-                {
-                  "title": "HEWAN MENU",
-                  "description": `Menampikan Hewan Menu`,
-                  "rowId": "/hewanmenu"
-                },
-                {
-                  "title": "KARTUN MENU",
-                  "description": `Menampikan Kartun Menu`,
-                  "rowId": "/kartunmenu"
-                },
-                {
-                  "title": "STALK MENU",
-                  "description": `Menampikan Stalk Menu`,
-                  "rowId": "/stalkmenu"
-                },
+                }, 
+                
                 {
                   "title": "RANDOM TEXT",
-                  "description": `Menampikan Random Text`,
+                  "description": `Menampikan Random Text(Show Random Text)`,
                   "rowId": "/randomtext"
                 },
                 {
                   "title": "RANDOM IMAGE",
-                  "description": `Menampikan Random Image`,
+                  "description": `Menampikan Random Image(Show Random Image)`,
                   "rowId": "/randomimage"
                 },
                 {
                   "title": "RANDOM TAG",
-                  "description": `Menampikan Random Tag`,
+                  "description": `Menampikan Random Tag(Show Random Tag)`,
                   "rowId": "/randomtag"
-                },
-                {
-                  "title": "SEARCH MENU",
-                  "description": `Menampikan Search Menu`,
-                  "rowId": "/searchmenu"
-                },
-                {
-                  "title": "KOREA MENU",
-                  "description": `Menampikan Korea Menu`,
-                  "rowId": "/koreamenu"
-                },
-                {
-                  "title": "CECAN MENU",
-                  "description": `Menampikan Cecan Menu`,
-                  "rowId": "/cecanmenu"
-                },
-                {
-                  "title": "COGAN MENU",
-                  "description": `Menampikan Cogan Menu`,
-                  "rowId": "/coganmenu"
-                },
+                }, 
                 {
                   "title": "CONVERT MENU",
-                  "description": `Menampikan Convert Menu`,
+                  "description": `Menampikan Convert Menu(Show Convert Menu)`,
                   "rowId": "/convertmenu"
                 },
                 {
                   "title": "MEME MAKER",
-                  "description": `Menampikan Meme Maker`,
+                  "description": `Menampikan Meme Maker(Show Meme Maker)`,
                   "rowId": "/mememaker"
                 },
                 {
                   "title": "EDITOR MENU",
-                  "description": `Menampikan Editor Menu`,
+                  "description": `Menampikan Editor Menu(Show Editor Menu)`,
                   "rowId": "/editormenu"
                 },
-                {
-                  "title": "NULIS MENU",
-                  "description": `Menampikan Nulis Menu`,
-                  "rowId": "/nulismenu"
-                },
-                {
-                  "title": "ANIMANGA",
-                  "description": `Menampikan Animanga`,
-                  "rowId": "/animanga"
-                },
-                {
-                  "title": "SOUND MENU",
-                  "description": `Menampikan Sound Menu`,
-                  "rowId": "/soundmenu"
-                }
+                
                 
 
 
@@ -1813,7 +1658,7 @@ jika menu tidak muncul silahkan ketik .allmenu untuk menampilkan menu
             "product": {
               "productImage": imeg,
               "productId": "150453297177375",
-              "title": `*ALLMENU Alif botz*`,
+              "title": `*ALLMENU ALIF BOTZ*`,
               "description": `MENU NYA
 `,
               "currencyCode": "SEWABOT =",
@@ -1844,7 +1689,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}revdl text 
 │❏ヅ ${prefix}toraccino text 
 │❏ヅ ${prefix}uapkpro text
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「DOWNLOAD MENU」⬣
 │❏ヅ ${prefix}joox query
@@ -1865,7 +1710,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}spotify url_video
 │❏ヅ ${prefix}mediafire url 
 │❏ヅ ${prefix}zippyshare url 
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
    
 ╭──⬣「FUN MENU」⬣
 │❏ヅ ${prefix}darkjoke
@@ -1876,7 +1721,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}toxic
 │❏ヅ ${prefix}dare
 │❏ヅ ${prefix}waktu
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「GROUP MENU」⬣
 │❏ヅ ${prefix}antilink
@@ -1896,7 +1741,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}setdesc
 │❏ヅ ${prefix}setnamegrup
 │❏ヅ ${prefix}tagall
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「MAKER MENU」⬣
 │❏ヅ ${prefix}blackpink text
@@ -1940,7 +1785,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}wolflogo text1 text2
 │❏ヅ ${prefix}steel3d text1 text2
 │❏ヅ ${prefix}wallgravity text1 text2
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「OWNER MENU」⬣
 │❏ヅ ${prefix}broadcast
@@ -1948,7 +1793,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}exif
 │❏ヅ ${prefix}join
 │❏ヅ ${prefix}clearall
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「KERANG MENU」⬣
 │❏ヅ ${prefix}watak
@@ -1964,21 +1809,21 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}cekganteng
 │❏ヅ ${prefix}cekcantik
 │❏ヅ ${prefix}cekmati *Nama*
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「RPG MENU」⬣
 │❏ヅ ${prefix}adventure *memulai*
 │❏ヅ ${prefix}usepotion *memakai potion*
 │❏ヅ ${prefix}heal  *cek heal*
 │❏ヅ ${prefix}potion *cek potion*  
-└──⬣「 ${botname2} 」⬣ 
+└──⬣「 ${botname} 」⬣ 
   
 ╭──⬣「ISLAM MENU」⬣
 │❏ヅ ${prefix}alquranaudio
 │❏ヅ ${prefix}asmaulhusna
 │❏ヅ ${prefix}kisahnabi
 │❏ヅ ${prefix}jadwalsholat
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
    
 ╭──⬣「ANIME MENU」⬣
 │❏ヅ ${prefix}itsuki
@@ -2034,7 +1879,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}genos
 │❏ヅ ${prefix}saitama
 │❏ヅ ${prefix}miku
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「EPHOTO 360」⬣
 │❏ヅ ${prefix}shadow text
@@ -2064,7 +1909,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}arcade8bit text
 │❏ヅ ${prefix}battlefield4 text1 text2 
 │❏ヅ ${prefix}pubg text1 text2
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
      
 ╭──⬣「HEWAN MENU」⬣
 │❏ヅ ${prefix}fox
@@ -2074,7 +1919,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}dog
 │❏ヅ ${prefix}cat
 │❏ヅ ${prefix}koala
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「EPHOTO OXY」⬣
 │❏ヅ ${prefix}wetglass text
@@ -2107,14 +1952,14 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}goldplaybutton text
 │❏ヅ ${prefix}silverplaybutton text
 │❏ヅ ${prefix}freefire text 
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「FILM & STORY」⬣
 │❏ヅ ${prefix}wattpad
 │❏ヅ ${prefix}wattpadsearch
 │❏ヅ ${prefix}drakorongoing
 │❏ヅ ${prefix}genshinsearch
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
       
 ╭──⬣「INFO MENU」⬣
 │❏ヅ ${prefix}infogempa
@@ -2127,14 +1972,14 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}kbbi
 │❏ヅ ${prefix}jadwaltvnow
 │❏ヅ ${prefix}jadwalbola
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
       
   ┌───「OTHER MENU」⬣
 │❏ヅ ${prefix}translate
 │❏ヅ ${prefix}lirik
 │❏ヅ ${prefix}jarak
 │❏ヅ ${prefix}heroml
-└──⬣「 ${botname2} 」⬣         
+└──⬣「 ${botname} 」⬣         
          
 ╭──⬣「TEMBAK MENU」⬣
 │❏ヅ ${prefix}tembak darat
@@ -2142,7 +1987,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}tembak udara
 │❏ヅ ${prefix}maling rumah
 │❏ヅ ${prefix}maling gedung
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「RANDOM TEXT」⬣
 │❏ヅ ${prefix}quotes
@@ -2154,7 +1999,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}bucin
 │❏ヅ ${prefix}pantun
 │❏ヅ ${prefix}randomnama
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
     
 ╭──⬣「RANDOM IMAGE」⬣
 │❏ヅ ${prefix}art
@@ -2168,14 +2013,14 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}shinobu
 │❏ヅ ${prefix}megumin
 │❏ヅ ${prefix}wallnime
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
     
 ╭──⬣「KARTUN MENU」⬣
 │❏ヅ ${prefix}kartundrama
 │❏ヅ ${prefix}kartunadventure    
 │❏ヅ ${prefix}kartunaction
 │❏ヅ ${prefix}kartunmovie
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
    
 ╭──⬣「MEME MAKER」⬣
 │❏ヅ ${prefix}meme1
@@ -2183,13 +2028,13 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}meme3
 │❏ヅ ${prefix}cmm
 │❏ヅ ${prefix}ohno
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
     
 ╭──⬣「STALK MENU」⬣
 │❏ヅ ${prefix}twiterstalk
 │❏ヅ ${prefix}igstalk 
 │❏ヅ ${prefix}mlstalk
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「CONVERT MENU」⬣
 │❏ヅ ${prefix}sticker
@@ -2206,7 +2051,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}tupai
 │❏ヅ ${prefix}tupai2
 │❏ヅ ${prefix}blub
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「CECAN MENU」⬣
 │❏ヅ ${prefix}cecanindo
@@ -2214,7 +2059,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}cecanjapan
 │❏ヅ ${prefix}cecanchina
 │❏ヅ ${prefix}cecankorea
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「COGAN MENU」⬣
 │❏ヅ ${prefix}coganindo
@@ -2222,7 +2067,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}coganjapan
 │❏ヅ ${prefix}coganchina
 │❏ヅ ${prefix}cogankorea
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「SEARCH MENU」⬣
 │❏ヅ ${prefix}image
@@ -2231,7 +2076,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}wallpapersearch
 │❏ヅ ${prefix}wallpapersearch2
 │❏ヅ ${prefix}shopee
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「KOREA MENU」⬣
 │❏ヅ ${prefix}blackpinkk
@@ -2243,7 +2088,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}majors
 │❏ヅ ${prefix}secret
 │❏ヅ ${prefix}pixy
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
   
 ╭──⬣「ABOUT MENU」⬣
 │❏ヅ ${prefix}speed
@@ -2251,7 +2096,7 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}owner
 │❏ヅ ${prefix}botstatus
 │❏ヅ ${prefix}rules
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
           
 ╭──⬣「EDITOR MENU」⬣
 │❏ヅ ${prefix}affect
@@ -2266,13 +2111,13 @@ reply(`╭──⬣「APK MENU 」⬣
 │❏ヅ ${prefix}circle
 │❏ヅ ${prefix}wanted
 │❏ヅ ${prefix}joker
-└──⬣「 ${botname2} 」⬣
+└──⬣「 ${botname} 」⬣
 `)
 Ramdani.sendMessage(from, allmenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: ftroli })
 break
       ///Batas list menu case
       case 'kerangmenu':
-        sendButLocation(from, kerangmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, kerangmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'rules':
         Ramdani.sendMessage(from, rules(prefix), MessageType.text, { quoted: ftroli })
@@ -2281,120 +2126,120 @@ break
           Ramdani.sendMessage(from, rules(prefix), MessageType.text, { quoted: ftroli })
           break
       case 'downloadmenu':
-        sendButLocation(from, downloadmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, downloadmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'animemenu':
-        sendButLocation(from, animemenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, animemenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'tembakmenu':
-        sendButLocation(from, tembakmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, tembakmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'othermenu':
-        sendButLocation(from, othermenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, othermenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'grupmenu':
-        sendButLocation(from, grupmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, grupmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
         case 'randomtag':
-        sendButLocation(from, randomtag(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, randomtag(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'randomimage':
-        sendButLocation(from, randomimage(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, randomimage(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'gamemenu':
-        sendButLocation(from, gamemenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, gamemenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
         case 'nulismenu':
-        sendButLocation(from, nulismenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, nulismenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
         case 'animanga':
-        sendButLocation(from, animanga(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, animanga(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'anon':
-        sendButLocation(from, anonymous(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, anonymous(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'rpgmenu':
-        sendButLocation(from, rpgmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, rpgmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'soundmenu':
-        sendButLocation(from, soundmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, soundmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'editormenu':
-        sendButLocation(from, editormenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, editormenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'koreamenu':
-        sendButLocation(from, koreamenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, koreamenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'coganmenu':
-        sendButLocation(from, coganmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, coganmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'cecanmenu':
-        sendButLocation(from, cecanmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, cecanmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'convertmenu':
-        sendButLocation(from, convertmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, convertmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'searchmenu':
-        sendButLocation(from, searchmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, searchmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'randomvideo':
-        sendButLocation(from, randomvideo(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, randomvideo(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'mememaker':
-        sendButLocation(from, mememaker(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, mememaker(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'kartunmenu':
-        sendButLocation(from, kartunmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, kartunmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'randomtext':
-        sendButLocation(from, textrandom(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, textrandom(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'stalkmenu':
-        sendButLocation(from, stalkmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, stalkmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'hewanmenu':
-        sendButLocation(from, hewanmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, hewanmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'sertimenu':
         Ramdani.sendMessage(from, sertimenu(prefix), MessageType.text, { quoted: ftroli })
         break
       case 'infomenu':
-        sendButLocation(from, infomenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, infomenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'filmmenu':
         Ramdani.sendMessage(from, filmmenu(prefix), MessageType.text, { quoted: ftroli })
         break
       case 'islammenu':
-        sendButLocation(from, islammenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, islammenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'ephotooxy':
-        sendButLocation(from, ephotooxy(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, ephotooxy(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'ephoto360':
-        sendButLocation(from, ephoto360(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, ephoto360(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'funmenu':
-        sendButLocation(from, funmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, funmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'makermenu':
-        sendButLocation(from, makermenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, makermenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'apkmenu':
-        sendButLocation(from, apkmenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, apkmenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
       case 'ownermenu':
-        sendButLocation(from, ownermenu(prefix, botName), `BY Ramdani`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot2}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
+        sendButLocation(from, ownermenu(prefix, botName), `by Alif`, { jpegThumbnail: await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/lighttext?apikey=${control.lolkey}&text=${command}`) }, [{ buttonId: `${prefix}menu`, buttonText: { displayText: `${control.NamaBot}` }, type: 1 }], { contextInfo: { mentionedJid: [senderr,] } })
         break
-        /////FITUR TAMBAHAN BY RAMDANI OFFICIAL
+        /////FITUR TAMBAHAN by Alif OFFICIAL
         case 'storemenu':
         stod = `${sender}`
         listMsg = {
           buttonText: 'Click Here',
           footerText: `© Creator By Alif Bot`,
-          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello mr/s, please vote here mr/s, don't spam, mr/s)`,
           sections: [
             {
-              "title": `Jangan Lupa Donasi Ya Jing`,
+              "title": `Donasi nya boleh om(Donate bro)`,
               rows: [
 
                 {
@@ -2412,11 +2257,13 @@ break
                   "description": `Menampilkan Fitur GB PB`,
                   "rowId": "/gbpb"
                 },
+
                 {
                   "title": "TOP UP SALDO",
                   "description": `Menampilkan Fitur Top Up Saldo`,
                   "rowId": "/topupsaldo"
                 },
+
                 {
                   "title": "SEWA BOT",
                   "description": `Menampilkan Fitur Sewa Bot`,
@@ -2433,7 +2280,7 @@ break
                   "rowId": "/buysc"
                 },
                 {
-                  "title": "DONASI",
+                  "title": "DONASI(DONATE)",
                   "description": `Menampilkan Fitur Donasi`,
                   "rowId": "/donate"
                 }                
@@ -2458,10 +2305,10 @@ break
         listMsg = {
           buttonText: 'Click Here',
           footerText: `© Creator By Alif Bot`,
-          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello mr/s, please vote here mr/s, don't spam, mr/s)`,
           sections: [
             {
-              "title": `Jangan Lupa Donasi Ya Jing`,
+              "title": `Donasi nya boleh om(Donate bro)`,
               rows: [
 
                 {
@@ -2500,16 +2347,15 @@ break
         }
         Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
         break
-
         case 'jokigame':
           stod = `${sender}`
           listMsg = {
             buttonText: 'Click Here',
             footerText: `© Creator By Alif Bot`,
-            description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+            description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello mr/s, please vote here mr/s, don't spam, mr/s)`,
             sections: [
               {
-                "title": `Jangan Lupa Donasi Ya Jing`,
+                "title": `Donasi nya boleh om(Donate bro)`,
                 rows: [
   
                   {
@@ -2549,10 +2395,10 @@ break
             listMsg = {
               buttonText: 'Click Here',
               footerText: `© Creator By Alif Bot`,
-              description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+              description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello mr/s, please vote here mr/s, don't spam, mr/s)`,
               sections: [
                 {
-                  "title": `Jangan Lupa Donasi Ya Jing`,
+                  "title": `Donasi nya boleh om(Donate bro)`,
                   rows: [
     
                     {
@@ -2582,15 +2428,16 @@ break
             }
             Ramdani.sendMessage(from, listMsg, MessageType.listMessage, { contextInfo: { mentionedJid: [stod] }, quoted: ftroli })
             break
+
         case 'topupsaldo':
         stod = `${sender}`
         listMsg = {
           buttonText: 'Click Here',
           footerText: `© Creator By Alif Bot`,
-          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak`,
+          description: `hallo kak silahkan pilih disini kak, jangan spam ya kak(hello mr/s, please vote here mr/s, don't spam, mr/s)`,
           sections: [
             {
-              "title": `Jangan Lupa Donasi Ya Jing`,
+              "title": `Donasi nya boleh om(Donate bro)`,
               rows: [
 
                 {
@@ -2631,7 +2478,7 @@ break
         break
         /////CASEEEEE NYAAAH BWANG
         case 'igowner':
-        reply(`*https://www.instagram.com/alifananta5*`)
+        reply(`*https://www.instagram.com/muhammadramdani196453*`)
         break
         case 'totalfitur':
         case 'total fitur':
@@ -2685,6 +2532,7 @@ reply(`╔════════════════════
 ╚════════════════════`)
 Ramdani.sendMessage(from, tes, audio, { mimetype: 'audio/mp4', ptt: true, quoted: ftroli })
 break
+
 case 'sewabot':
 tes = fs.readFileSync('./media/audio/arigato.mp3')
 reply(`━━━━━『 *LIST SEWA BOT* 』━━━━━
@@ -2849,7 +2697,6 @@ reply(` mau bayar ka? klik atasnya ka`)
 
 break
 
-
 case 'topupgopay':
 reply(`_chat owner_`)
 break
@@ -2970,7 +2817,7 @@ Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, { contex
         if (args.length == 0) return reply(`Teksnya mana?...`)
         ini_txt = args.join(" ")
         getBuffer(`https://leyscoders-api.herokuapp.com/api/textto-image?text=${ini_txt}`).then((gambar) => {
-          Ramdani.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `Follow @Ramdanigns`, quoted: ftroli })
+          Ramdani.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `Follow @Alif`, quoted: ftroli })
         })
         break
 
@@ -3033,7 +2880,7 @@ Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, { contex
             headerType: 1
           }
           Ramdani.sendMessage(from, buttonMessagee, MessageType.buttonsMessage, {
-            caption: `${control.NamaBot2}`,
+            caption: `${control.NamaBot}`,
             "contextInfo": {
               text: 'hi',
               "forwardingScore": 1000000000,
@@ -3112,7 +2959,7 @@ Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, { contex
         if (isBanchat) return
         timestampe = speed();
         latensie = speed() - timestampe
-        reply(`「 *[ •${control.NamaBot2}• ]* 」\n //==[${latensie.toFixed(4)} detik 💬]==\\`)
+        reply(`「 *[ •${control.NamaBot}• ]* 」\n //==[${latensie.toFixed(4)} detik 💬]==\\`)
         break
       case 'leveling':
         if (isBanned) return reply(mess.ban)
@@ -3142,7 +2989,7 @@ Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, { contex
             headerType: 1
           }
           Ramdani.sendMessage(from, buttonMessagee, MessageType.buttonsMessage, {
-            caption: `${control.NamaBot2}`,
+            caption: `${control.NamaBot}`,
             "contextInfo": {
               text: 'hi',
               "forwardingScore": 1000000000,
@@ -3204,7 +3051,7 @@ Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, { contex
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
         Ramdani.relayWAMessage(prep)
         break
-      ////////case by Ramdani,otsuka,Ramdani
+      ////////case by Alif,otsuka,Ramdani
       //Download menu
       case 'ig':
         reply(mess.wait)
@@ -3716,7 +3563,7 @@ Tunggu Proses Mengirim Media......`
             reply('[ ! ] Error Query Yang Anda Masukan Tidak Ada')
           })
           reply(`.Playing ${res.all[0].title}`)
-          let thumbInfo = `${botname2} 
+          let thumbInfo = `${botName} 
           Judul : ${res.all[0].title}
           ID Video : ${res.all[0].videoId}
           Diupload Pada : ${res.all[0].ago}
@@ -4094,7 +3941,7 @@ case 'ytplay':
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
           footerText: watermark, imageMessage: imageMsg,
-          contentText: `${control.NamaBot2}`, buttons, headerType: 4
+          contentText: `${control.NamaBot}`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
         Ramdani.relayWAMessage(prep)
@@ -4135,7 +3982,7 @@ case 'ytplay':
         apakah = body.slice(1)
         const apa = ['Iya', 'Tidak', 'Bisa Jadi', 'Coba Ulangi']
         const kah = apa[Math.floor(Math.random() * apa.length)]
-        Ramdani.sendMessage(from, 'Pertanyaan : ' + apakah + '\n*Jawaban :* ' + kah, text, { quoted: ftroli })
+        Ramdani.sendMessage(from, 'Pertanyaan : ' + apakah + '\n*Jawaban(Answer) :* ' + kah, text, { quoted: ftroli })
         break
       //================================================================================================
       case 'rate':
@@ -4143,7 +3990,7 @@ case 'ytplay':
         rate = body.slice(1)
         const ra = ['0', '4', '9', '17', '28', '34', '48', '59', '62', '74', '83', '97', '100', '29', '94', '75', '82', '41', '39']
         const te = ra[Math.floor(Math.random() * ra.length)]
-        Ramdani.sendMessage(from, 'Pertanyaan : ' + rate + '\n*Jawaban :* ' + te + '%', text, { quoted: ftroli })
+        Ramdani.sendMessage(from, 'Pertanyaan : ' + rate + '\n*Jawaban(Answer) :* ' + te + '%', text, { quoted: ftroli })
         break
       //================================================================================================ 
       case 'cantikcek':
@@ -4151,7 +3998,7 @@ case 'ytplay':
         cantik = body.slice(1)
         const can = ['10', '30', '20', '40', '50', '60', '70', '62', '74', '83', '97', '100', '29', '94', '75', '82', '41', '39']
         const tik = can[Math.floor(Math.random() * can.length)]
-        Ramdani.sendMessage(from, 'Pertanyaan : ' + cantik + '\n*Jawaban :* ' + tik + '%', text, { quoted: ftroli })
+        Ramdani.sendMessage(from, 'Pertanyaan : ' + cantik + '\n*Jawaban(Answer) :* ' + tik + '%', text, { quoted: ftroli })
         break
       //================================================================================================ 
       case 'gantengcek':
@@ -4159,7 +4006,7 @@ case 'ytplay':
         ganteng = body.slice(1)
         const gan = ['10', '30', '20', '40', '50', '60', '70', '62', '74', '83', '97', '100', '29', '94', '75', '82', '41', '39']
         const teng = gan[Math.floor(Math.random() * gan.length)]
-        Ramdani.sendMessage(from, 'Pertanyaan : ' + ganteng + '\n*Jawaban :* ' + teng + '%', text, { quoted: ftroli })
+        Ramdani.sendMessage(from, 'Pertanyaan : ' + ganteng + '\n*Jawaban(Answer) :* ' + teng + '%', text, { quoted: ftroli })
         break
       //================================================================================================ 
       case 'beban':
@@ -5235,7 +5082,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix}menu`, buttonText: { displayText: `BACK MENU` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: 'follow @Ramdanigns', imageMessage: imageMsg,
+          footerText: 'follow @Alif', imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: fgif })
@@ -5260,7 +5107,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix}menu`, buttonText: { displayText: `BACK MENU` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: 'follow @Ramdanigns', imageMessage: imageMsg,
+          footerText: 'follow @Alif', imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: fgif })
@@ -5945,12 +5792,12 @@ case 'ytplay':
           "templateMessage": {
             "hydratedFourRowTemplate": {
               "hydratedContentText": "Hello,\nSelamat Datang Ramdani Razzaq",
-              "hydratedFooterText": "Debug By Ramdani",
+              "hydratedFooterText": "Debug by Alif",
               "hydratedButtons": [
                 {
                   "urlButton": {
-                    "displayText": "Join Group Whatsapp Ramdani Razzaq",
-                    "url": "https://chat.whatsapp.com/KdA0jvJmgQ49uIIg7NmGVJ"
+                    "displayText": "Join Group Whatsapp belom ada",
+                    "url": "belom ada grup"
                   },
                   "index": 0
                 }
@@ -5958,7 +5805,7 @@ case 'ytplay':
             },
             "hydratedTemplate": {
               "hydratedContentText": "Hello,\nSelamat Datang Ramdani Razzaq",
-              "hydratedFooterText": "Debug By Ramdani",
+              "hydratedFooterText": "Debug By Alif Ananta",
               "hydratedButtons": [
                 {
                   "urlButton": {
@@ -6331,7 +6178,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6343,7 +6190,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6356,7 +6203,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6368,7 +6215,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6380,7 +6227,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6392,7 +6239,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6404,7 +6251,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6416,7 +6263,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6428,7 +6275,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6440,7 +6287,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6452,7 +6299,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6464,7 +6311,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6476,7 +6323,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6488,7 +6335,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6500,7 +6347,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6512,7 +6359,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6524,7 +6371,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6536,7 +6383,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -6548,7 +6395,7 @@ case 'ytplay':
         buttons = [{ buttonId: `${prefix + command}`, buttonText: { displayText: `NEXT` }, type: 1 }]
         imageMsg = (await Ramdani.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
         buttonsMessage = {
-          footerText: `${control.NamaBot2}`, imageMessage: imageMsg,
+          footerText: `${control.NamaBot}`, imageMessage: imageMsg,
           contentText: `©WhatsApp bot`, buttons, headerType: 4
         }
         prep = await Ramdani.prepareMessageFromContent(from, { buttonsMessage }, { quoted: ftroli })
@@ -7807,7 +7654,7 @@ case 'ganteng': case 'cantik': case 'jelek': case 'goblok':
           reply(`Waalaikumsalam`)
         }
 
-        if (budy.includes("Ramdani")) { //random sticker by Ramdani, Hapus WM = yatim!
+        if (budy.includes("Alif")) { //random sticker by Alif, Hapus WM = yatim!
           data = stick
           jsonData = JSON.parse(data);
           xm1 = Math.floor(Math.random() * jsonData.length);
@@ -7815,7 +7662,7 @@ case 'ganteng': case 'cantik': case 'jelek': case 'goblok':
           xm3 = xm2.result
           sendStickerUrl(from, xm3)
         }
-        if (budy.includes("Ramdani")) { //random sticker by Ramdani, Hapus WM = yatim!
+        if (budy.includes("Alif")) { //random sticker by Alif, Hapus WM = yatim!
           data = stick
           jsonData = JSON.parse(data);
           xm1 = Math.floor(Math.random() * jsonData.length);
